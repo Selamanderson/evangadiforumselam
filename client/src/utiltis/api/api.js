@@ -1,8 +1,10 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:5500/api",
-});
+//   baseURL: "http://localhost:5500/api",
+// });
+  baseURL: "https://evangadi-forum.onrender.com/api",});
+  
 
 // to include token in every request
 instance.interceptors.request.use(
@@ -14,6 +16,6 @@ instance.interceptors.request.use(
     return config;
   },
   (error) => Promise.reject(error)
-);
+)
 
 export default instance;
